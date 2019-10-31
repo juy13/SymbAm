@@ -18,11 +18,12 @@ void SymbAm::clean_str()
 
 SymbAm::SymbAm()
 {
-
+	memset(this->array, 0x00, M * sizeof(char));
 }
 
 SymbAm::SymbAm(int p)
 {
+	memset(this->array, 0x00, M * sizeof(char));
 	if (p >= M)
 	{
 		throw std::exception("Too big power");
@@ -40,6 +41,7 @@ SymbAm::SymbAm(int p)
 
 SymbAm::SymbAm(char * came, int len)
 {
+	memset(this->array, 0x00, M * sizeof(char));
 	if (len >= M)
 	{
 		throw std::exception("Too big string");
@@ -65,6 +67,7 @@ SymbAm::SymbAm(char * came, int len)
 
 SymbAm::SymbAm(const char * came)
 {
+	memset(this->array, 0x00, M * sizeof(char));
 	if (strlen(came) >= M)
 	{
 		throw std::exception("Too big string");
@@ -90,6 +93,7 @@ SymbAm::SymbAm(const char * came)
 
 SymbAm::SymbAm(const SymbAm & A)
 {
+	memset(this->array, 0x00, M * sizeof(char));
 	memcpy(this->array, A.get_arr(), M * sizeof(char));
 	this->power = A.get_pow();
 }

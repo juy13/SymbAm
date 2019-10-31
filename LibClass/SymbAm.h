@@ -7,7 +7,7 @@
 class SymbAm
 {
 private:
-	char array[M] = { 0 };
+	char array[M];
 	int power = 0;
 
 	bool find_as(char a) const;

@@ -1,4 +1,4 @@
 ﻿  SymbAm.cpp
-d:\se7\windows\vs\laba\libclass\symbam.cpp(74): warning C4018: <: несоответствие типов со знаком и без знака
-d:\se7\windows\vs\laba\libclass\symbam.cpp(144): warning C4018: <: несоответствие типов со знаком и без знака
+d:\se7\windows\vs\laba\libclass\symbam.cpp(77): warning C4018: <: несоответствие типов со знаком и без знака
+d:\se7\windows\vs\laba\libclass\symbam.cpp(148): warning C4018: <: несоответствие типов со знаком и без знака
   LibClass.vcxproj -> D:\SE7\WINDOWS\VS\Laba\Debug\LibClass.lib
