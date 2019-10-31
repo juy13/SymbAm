@@ -1,4 +1,4 @@
 ﻿  SymbAm.cpp
-c:\users\pc\desktop\symbam-master\libclass\symbam.cpp(74): warning C4018: '<': signed/unsigned mismatch
-c:\users\pc\desktop\symbam-master\libclass\symbam.cpp(144): warning C4018: '<': signed/unsigned mismatch
-  LibClass.vcxproj -> C:\Users\pc\Desktop\SymbAm-master\Debug\LibClass.lib
+d:\se7\windows\vs\laba\libclass\symbam.cpp(74): warning C4018: <: несоответствие типов со знаком и без знака
+d:\se7\windows\vs\laba\libclass\symbam.cpp(144): warning C4018: <: несоответствие типов со знаком и без знака
+  LibClass.vcxproj -> D:\SE7\WINDOWS\VS\Laba\Debug\LibClass.lib

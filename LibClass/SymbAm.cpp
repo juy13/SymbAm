@@ -188,7 +188,7 @@ SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 
 	for (int i = 0, j = 0; i < d1.get_pow(); i++)
 	{
-		if (d2.power <= i)
+		/*if (d2.power <= i)
 		{
 			for (int k = i; k < d1.get_pow(); k++)
 			{
@@ -197,9 +197,9 @@ SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 				j++;
 			}
 			break;
-		}
+		}*/
 			
-		if (d1.find_as(d2.array[i]))
+		if (d2.find_as(d1.array[i]))
 			continue;
 		else
 		{
@@ -221,17 +221,6 @@ SymbAm operator*(const SymbAm & d1, const SymbAm & d2)
 	{
 		if (d2.power <= i)
 		{
-			for (int k = 0; k < d2.power; k++)
-			{
-				if (d2.find_as(d1.array[i]))
-					continue;
-				else
-				{
-					ncl.array[j] = d2.array[k];
-					ncl.power++;
-					j++;
-				}
-			}
 			break;
 		}
 			
