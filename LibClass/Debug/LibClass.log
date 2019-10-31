@@ -1,0 +1,4 @@
+﻿  SymbAm.cpp
+c:\users\pc\desktop\symbam-master\libclass\symbam.cpp(74): warning C4018: '<': signed/unsigned mismatch
+c:\users\pc\desktop\symbam-master\libclass\symbam.cpp(144): warning C4018: '<': signed/unsigned mismatch
+  LibClass.vcxproj -> C:\Users\pc\Desktop\SymbAm-master\Debug\LibClass.lib

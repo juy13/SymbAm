@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laba", "Laba\Laba.vcxproj", "{1F48F1BF-0FDC-43FC-B5B1-98211A257AC1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B83F82AC-F8F5-465D-89EA-3BA80ADEA3FC} = {B83F82AC-F8F5-465D-89EA-3BA80ADEA3FC}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibClass", "LibClass\LibClass.vcxproj", "{B83F82AC-F8F5-465D-89EA-3BA80ADEA3FC}"
 EndProject
