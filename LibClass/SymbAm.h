@@ -7,7 +7,7 @@
 class SymbAm
 {
 private:
-	char array[M];
+	char array[M] = { 0 };
 	int power = 0;
 
 	bool find_as(char a) const;
@@ -16,6 +16,7 @@ private:
 public:
 	SymbAm();
 	SymbAm(int p);
+	SymbAm(char s);
 	SymbAm(char *came, int len);
 	SymbAm(const char *came);
 	SymbAm(const SymbAm &A);
@@ -27,8 +28,11 @@ public:
 	friend std::ostream& operator<< (std::ostream &out, const SymbAm &point);
 	friend std::istream& operator>> (std::istream &in, SymbAm &point);
 	friend SymbAm operator+(const SymbAm &d1, const SymbAm &d2);
+	friend SymbAm operator+(const char &s, const SymbAm &d2);
 	friend SymbAm operator-(const SymbAm &d1, const SymbAm &d2);
+	friend SymbAm operator-(const char &s, const SymbAm &d2);
 	friend SymbAm operator*(const SymbAm &d1, const SymbAm &d2);
+	friend SymbAm operator*(const char &s, const SymbAm &d2);
 	SymbAm& operator+=(const char& right);
 	~SymbAm();
 };

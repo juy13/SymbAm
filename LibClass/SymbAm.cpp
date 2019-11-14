@@ -18,12 +18,17 @@ void SymbAm::clean_str()
 
 SymbAm::SymbAm()
 {
-	memset(this->array, 0x00, M * sizeof(char));
+
+}
+
+SymbAm::SymbAm(char s)
+{
+	this->power = 1;
+	this->array[0] = s;
 }
 
 SymbAm::SymbAm(int p)
 {
-	memset(this->array, 0x00, M * sizeof(char));
 	if (p >= M)
 	{
 		throw std::exception("Too big power");
@@ -41,7 +46,6 @@ SymbAm::SymbAm(int p)
 
 SymbAm::SymbAm(char * came, int len)
 {
-	memset(this->array, 0x00, M * sizeof(char));
 	if (len >= M)
 	{
 		throw std::exception("Too big string");
@@ -67,7 +71,6 @@ SymbAm::SymbAm(char * came, int len)
 
 SymbAm::SymbAm(const char * came)
 {
-	memset(this->array, 0x00, M * sizeof(char));
 	if (strlen(came) >= M)
 	{
 		throw std::exception("Too big string");
@@ -93,7 +96,6 @@ SymbAm::SymbAm(const char * came)
 
 SymbAm::SymbAm(const SymbAm & A)
 {
-	memset(this->array, 0x00, M * sizeof(char));
 	memcpy(this->array, A.get_arr(), M * sizeof(char));
 	this->power = A.get_pow();
 }
@@ -185,6 +187,13 @@ SymbAm operator+(const SymbAm & d1, const SymbAm & d2)
 	return ncl;
 }
 
+SymbAm operator+(const char &s, const SymbAm & d2)
+{
+	SymbAm S(s);
+	SymbAm nw = S + d2;
+	return nw;
+}
+
 SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 {
 	SymbAm ncl;
@@ -192,7 +201,7 @@ SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 
 	for (int i = 0, j = 0; i < d1.get_pow(); i++)
 	{
-		/*if (d2.power <= i)
+		if (d2.power <= i)
 		{
 			for (int k = i; k < d1.get_pow(); k++)
 			{
@@ -201,9 +210,9 @@ SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 				j++;
 			}
 			break;
-		}*/
+		}
 			
-		if (d2.find_as(d1.array[i]))
+		if (d1.find_as(d2.array[i]))
 			continue;
 		else
 		{
@@ -216,6 +225,13 @@ SymbAm operator-(const SymbAm & d1, const SymbAm & d2)
 	return ncl;
 }
 
+SymbAm operator-(const char &s, const SymbAm & d2)
+{
+	SymbAm S(s);
+	SymbAm nw = S - d2;
+	return nw;
+}
+
 SymbAm operator*(const SymbAm & d1, const SymbAm & d2)
 {
 	SymbAm ncl;
@@ -225,6 +241,17 @@ SymbAm operator*(const SymbAm & d1, const SymbAm & d2)
 	{
 		if (d2.power <= i)
 		{
+			for (int k = 0; k < d2.power; k++)
+			{
+				if (d2.find_as(d1.array[i]))
+					continue;
+				else
+				{
+					ncl.array[j] = d2.array[k];
+					ncl.power++;
+					j++;
+				}
+			}
 			break;
 		}
 			
@@ -238,6 +265,13 @@ SymbAm operator*(const SymbAm & d1, const SymbAm & d2)
 		}
 	}
 	return ncl;
+}
+
+SymbAm operator*(const char &s, const SymbAm & d2)
+{
+	SymbAm S(s);
+	SymbAm nw = S * d2;
+	return nw;
 }
 
 SymbAm & SymbAm::operator+=(const char & right)
