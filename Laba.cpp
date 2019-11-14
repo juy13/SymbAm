@@ -13,7 +13,7 @@ int main()
 	std::cout << S7;
 	char z = 'z';
 	SymbAm S3, S4;
-	S3 = S4 + z;
+	S3 = S4 - z;
 	std::cout << S3;
 	SymbAm S("01234");
 	SymbAm S1("ABC");
