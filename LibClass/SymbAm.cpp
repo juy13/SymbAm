@@ -56,7 +56,7 @@ SymbAm::SymbAm(char * came, int len)
 		{
 			if (find_as(came[i]))
 			{
-				throw std::exception("There is some repeated symbols");
+				throw std::exception("There are some repeated symbols");
 			}
 				
 			else
@@ -81,7 +81,7 @@ SymbAm::SymbAm(const char * came)
 		{
 			if (find_as(came[i]))
 			{
-				throw std::exception("There is some repeated symbols");
+				throw std::exception("There are some repeated symbols");
 			}
 
 			else
