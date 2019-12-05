@@ -165,11 +165,8 @@ SymbAmD & SymbAmD::operator=(const SymbAmD & d1)
 		this->array = new char[d1.get_pow() + 100];
 		this->real_sz = 100 + d1.get_pow();
 	}
-	for (int i = 0; i < d1.get_pow(); i++)
-	{
-		this->power++;
-		this->array[i] = (d1.get_arr())[i];
-	}
+	this->power = d1.get_pow();
+	memcpy(this->array, d1.get_arr(), sizeof(char) * this->power);
 	return *this;
 }
 

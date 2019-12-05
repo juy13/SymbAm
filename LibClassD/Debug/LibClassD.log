@@ -1,0 +1,4 @@
+﻿  SymbAmD.cpp
+c:\users\aak\desktop\symbam-master\libclassd\symbamd.cpp(100): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\aak\desktop\symbam-master\libclassd\symbamd.cpp(196): warning C4018: <: несоответствие типов со знаком и без знака
+  LibClassD.vcxproj -> C:\Users\AAK\Desktop\SymbAm-master\Debug\LibClassD.lib
