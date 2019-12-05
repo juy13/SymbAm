@@ -30,7 +30,7 @@ int main()
 	std::cout << "Inputing elements in class A" << std::endl;
 	try
 	{
-		for (i = 0; i < 200; i++)
+		for (i = 0; i < 100; i++)
 		{
 			A += char(i + 0x25);
 		}
@@ -99,7 +99,7 @@ int main()
 	std::cout << "Inputing elements in class A" << std::endl;
 	try
 	{
-		for (i = 0; i < 200; i++)
+		for (i = 0; i < 100; i++)
 		{
 			AD += char(i + 0x25);
 		}
@@ -131,7 +131,7 @@ int main()
 	std::cout << "Printing class C: " << CD << std::endl;
 
 	std::cout << "Creating class D by string" << std::endl;
-	SymbAmD DD("1234567890-=qwefjsk");
+	SymbAmD DD("1234567890-=qwe");
 	std::cout << "sizeof class D: " << DD.get_pow() << std::endl;
 	std::cout << "Printing class D: " << DD << std::endl;
 
@@ -146,7 +146,7 @@ int main()
 		std::cout << ex.what() << std::endl;
 	}
 
-	std::cout << "sizeof class C: " << DD.get_pow() << std::endl;
-	std::cout << "Printing class C: " << DD << std::endl;
+	std::cout << "sizeof class D: " << DD.get_pow() << std::endl;
+	std::cout << "Printing class D: " << DD << std::endl;
 }
 
